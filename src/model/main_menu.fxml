@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.base.MainController">
+    <children>
+    <Label alignment="CENTER" layoutX="361.0" layoutY="14.0" prefHeight="82.0" prefWidth="79.0" text="RSA">
+        <font>
+            <Font size="39.0" />
+        </font></Label>
+    <Label layoutX="66.0" layoutY="150.0" text="Открытый ключ:">
+        <font>
+            <Font size="39.0" />
+        </font>
+    </Label>
+    <Label fx:id="openKey" layoutX="400.0" layoutY="150.0">
+        <font>
+            <Font size="39.0" />
+        </font>
+    </Label>
+    <TextField fx:id="input" layoutX="66.0" layoutY="300.0" prefHeight="65.0" prefWidth="670.0">
+        <font>
+            <Font size="30.0" />
+        </font>
+    </TextField>
+    <Button fx:id="startButton" layoutX="196.0" layoutY="407.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="410.0" text="Отправить">
+        <font>
+            <Font size="39.0" />
+        </font>
+    </Button>
+    </children>
+</AnchorPane>
