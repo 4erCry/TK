@@ -135,7 +135,7 @@ namespace protect_inf_LR1
                 int index = Array.IndexOf(characters, s[i]);
 
                 bi = new BigInteger(index);
-                bi = BigInteger.Pow(bi, (int)e);
+                bi = BinPow(bi, (int)e);
 
                 BigInteger n_ = new BigInteger((int)n);
 
@@ -157,7 +157,7 @@ namespace protect_inf_LR1
             foreach (string item in input)
             {
                 bi = new BigInteger(Convert.ToDouble(item));
-                bi = BigInteger.Pow(bi, (int)d);
+                bi = BinPow(bi, (int)d);
 
                 BigInteger n_ = new BigInteger((int)n);
 
@@ -169,6 +169,17 @@ namespace protect_inf_LR1
             }
 
             return result;
+        }
+
+        private BigInteger BinPow(BigInteger a, long n)
+        {
+	        if (n == 0) return 1;
+	        if (n % 2 == 1) return BinPow(a, n - 1) * a;
+	        else
+	        {
+		        BigInteger b = BinPow(a, n / 2);
+		        return b * b;
+	        }
         }
 
         
@@ -201,7 +212,7 @@ namespace protect_inf_LR1
             return e;
         }
 
-		static double FastPower(double @base, int exponent)
+		/*static double FastPower(double @base, int exponent)
         {
 	         if (double.IsNaN(@base))					
 		     return double.NaN;						
@@ -239,6 +250,6 @@ namespace protect_inf_LR1
 	         if (exponent < 0)
 		     return double.PositiveInfinity;			
 	         return (exponent & 1) != 0 ? @base : 0.0;
-     }
+     }*/
     }
 }
